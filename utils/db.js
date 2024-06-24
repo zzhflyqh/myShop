@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+const { DB_URL } = require("config/appConfig");
 
 const connection = {};
 
@@ -13,7 +14,7 @@ async function connect() {
     }
     await mongoose.disconnect();
   }
-  const db = await mongoose.connect(process.env.MONGODO_URL);
+  const db = await mongoose.connect(DB_URL);
   connection.isConnected = db.connections[0].readyState;
 }
 
