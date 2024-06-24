@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const { DB_URL } = require("../appConfig");
+const { DB_URL } = require("@/appConfig");
 
 const connection = {};
 
